@@ -273,26 +273,57 @@ const availableProduce = [
 function SeasonProduce(){
   return (
     <div>
-      {/* <style jsx> {`
-        div {
-          background-color: red;
-        }
-      `}
-      </style> */}
-      <h2>Seasonal produce:</h2>
+      <style jsx> {`
+            h2 {
+                text-align: center;
+                font-size: 32px;
+            }
+            .months {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                align-items: flex-start;
+            }
+            h3 {
+                font-size: 30px;
+            }
+            .month {
+                margin: 0px 20px;
+                text-align: center;
+                width: 350px;
+                font-variant: small-caps;
+            }
+            .products {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                font-size: 18px;
+            }
+
+            .product {
+                font-variant: none;
+                margin: 0px 15px
+            }
+        `}
+      </style>
+      <h2>SEASONAL PRODUCE:</h2>
       <hr />
-      {availableProduce.map((produce, index) =>
+      <div className="months">
+        {availableProduce.map((produce, index) =>
         {
-            return <div>
-                <h2>Month: {produce.month}</h2>
-                {(produce.selection).map((product, idx2) => {
-                    return <Product name={product}/>
-                }
-                )}
+          return <div className="month" key={index}>
+            <h3>{produce.month}</h3>
+            <div className="products">
+              {(produce.selection).map((product, idx2) => {
+                return <Product name={product} key={availableProduce.length + idx2}/>;
+              }
+              )}
             </div>
-        }
-        
-      )}
+            <hr/>
+          </div>;
+        } 
+        )}
+      </div>
     </div>
   );
 }

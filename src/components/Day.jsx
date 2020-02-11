@@ -3,11 +3,18 @@ import PropTypes from 'prop-types';
 
 function Day(props){
   return (
-    <div>
+    <div className="day">
+      <style jsx> {`
+        .day {
+          font-size: 20px;
+          text-align: center;
+        }
+      `}
+      </style>
       <h3>{props.name}</h3>
       <p><em>{props.location}</em></p>
       <p>{props.hours}</p>
-      <p>{props.booth}</p>
+      <p>Booth: {props.booth}</p>
       <hr/>
     </div>
   );

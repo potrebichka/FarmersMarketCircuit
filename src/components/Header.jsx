@@ -4,7 +4,7 @@ import React from 'react';
 function Header(){
   return (
     <div>
-        <style jsx>{`
+      <style jsx>{`
           h1 {
             margin-top: 50px;
             text-align: center;

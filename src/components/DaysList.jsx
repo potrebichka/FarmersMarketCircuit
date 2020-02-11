@@ -51,7 +51,8 @@ function DaysList(){
         .days {
           display: flex;
           flex-wrap: wrap;
-          justify-content: center;
+          justify-content: space-around;
+          align-items: center;
         }
       `}
       </style>
