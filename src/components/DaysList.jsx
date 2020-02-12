@@ -42,7 +42,7 @@ const marketSchedule = [
 
 function DaysList(){
   return (
-    <div>
+    <div className="schedule">
       <style jsx> {`
         h2 {
           text-align: center;
@@ -53,6 +53,11 @@ function DaysList(){
           flex-wrap: wrap;
           justify-content: space-around;
           align-items: center;
+        }
+        .schedule {
+          margin-top: 20%;
+          margin-bottom: 50%;
+           
         }
       `}
       </style>
